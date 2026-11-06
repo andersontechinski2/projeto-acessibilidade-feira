@@ -1,0 +1,189 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172554;
+    transition: 0.3s;
+}
+
+header {
+    background: #123b69;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0002;
+}
+
+h2 {
+    color: #123b69;
+    font-size: 25px;
+}
+
+.descricao {
+    font-size: 19px;
+}
+
+label {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 220px;
+    padding: 18px;
+    font-size: 20px;
+    border: 2px solid #64748b;
+    border-radius: 10px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 4px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+select {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #64748b;
+    background: white;
+}
+
+.controles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    color: white;
+    background: #12613b;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.pausar {
+    background: #a15c00;
+}
+
+.parar {
+    background: #b42318;
+}
+
+.secundario {
+    background: #123b69;
+}
+
+.opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #12613b;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #334155;
+    font-size: 16px;
+}
+
+/* Modo alto contraste */
+
+body.contraste {
+    background: black;
+    color: white;
+}
+
+body.contraste .container {
+    background: black;
+    color: white;
+    border: 2px solid yellow;
+}
+
+body.contraste h2 {
+    color: yellow;
+}
+
+body.contraste textarea,
+body.contraste select {
+    background: black;
+    color: white;
+    border: 2px solid yellow;
+}
+
+body.contraste label,
+body.contraste footer {
+    color: white;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .opcoes {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+}

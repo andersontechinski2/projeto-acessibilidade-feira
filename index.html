@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voz Acessível</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🔊 Voz Acessível</h1>
+        <p>Transformando textos em voz para todos!</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Bem-vindo ao Voz Acessível!</h2>
+
+        <p class="descricao">
+            Digite ou cole seu texto abaixo e nosso sistema
+            fará a leitura em voz alta para você.
+        </p>
+
+        <label for="texto">Digite seu texto:</label>
+
+        <textarea
+            id="texto"
+            placeholder="Escreva aqui o texto que deseja ouvir..."
+        ></textarea>
+
+        <label for="voz">Escolha a voz:</label>
+
+        <select id="voz">
+            <option value="">Carregando vozes...</option>
+        </select>
+
+        <label for="velocidade">Velocidade da leitura:</label>
+
+        <select id="velocidade">
+            <option value="0.6">Muito devagar</option>
+            <option value="0.8">Devagar</option>
+            <option value="1" selected>Normal</option>
+            <option value="1.2">Rápida</option>
+            <option value="1.5">Muito rápida</option>
+        </select>
+
+        <div class="controles">
+
+            <button onclick="falar()">
+                ▶ Ouvir texto
+            </button>
+
+            <button class="pausar" onclick="pausar()">
+                ⏸ Pausar
+            </button>
+
+            <button class="secundario" onclick="continuar()">
+                ▶ Continuar
+            </button>
+
+            <button class="parar" onclick="parar()">
+                ■ Parar
+            </button>
+
+        </div>
+
+        <div id="status" role="status" aria-live="polite">
+            Aguardando texto...
+        </div>
+
+        <hr>
+
+        <h2>♿ Acessibilidade</h2>
+
+        <div class="opcoes">
+
+            <button class="secundario" onclick="aumentar()">
+                Aumentar letras A+
+            </button>
+
+            <button class="secundario" onclick="diminuir()">
+                Diminuir letras A-
+            </button>
+
+            <button class="secundario" onclick="contraste()">
+                Alto contraste
+            </button>
+
+            <button class="secundario" onclick="limpar()">
+                Limpar texto
+            </button>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Voz Acessível © 2026</p>
+        <p>Tecnologia e inclusão para todos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
